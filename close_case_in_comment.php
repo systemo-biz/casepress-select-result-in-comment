@@ -5,7 +5,7 @@ Plugin URI: http://casepress.org
 Description: Выбор результата в комментариях к делу
 Author: CasePress
 Author URI: http://casepress.org
-GitHub Plugin URI: https://github.com/systemo-biz/cp-select-result-in-comment
+GitHub Plugin URI: https://github.com/systemo-biz/casepress-select-result-in-comment
 GitHub Branch: master
 Version: 20150808-3
 */
@@ -84,16 +84,6 @@ private function __construct() {
       $tag = get_term_by('id', $result, 'results');
 
       $answer = wp_set_object_terms($post->ID, $tag->term_id, 'results');
-
-      echo 'Ответ:';
-      var_dump($answer);
-
-      echo '<hr/>ID:';
-      var_dump($post->ID);
-
-      echo '<hr/>$tag:';
-      var_dump( $tag->term_id );
-      exit();
 
       return;
 
